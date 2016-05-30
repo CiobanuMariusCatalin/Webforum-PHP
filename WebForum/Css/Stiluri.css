@@ -1,0 +1,117 @@
+.bigContainer{
+	
+	/*albastru putin mai inchis*/
+	background-color:rgb(105,210,231);
+	
+	
+	width:1000px;
+	margin-top:150px;
+	margin-left:auto;
+	margin-right:auto;
+	padding:20px;
+}
+td{
+	padding:10px;
+}
+table,td{
+    border: 1px solid black;
+}
+table{
+	width:100%;
+	margin-top:20px;
+}
+caption{
+	background-color:black;
+	/*portocaliu deschis*/
+	background-color:rgb(243,134,48);
+}
+
+a{
+	/*portocaliu inchis*/
+	color:rgb(250,105,0);
+	text-decoration: none;
+}
+html{
+	background-image: url("../imagini/background.jpg");
+	background-position:center top; 
+	background-repeat:no-repeat;
+	/*portocaliu inchis*/
+	background-color:rgb(250,105,0);
+	/*albastru putin mai inchis*/
+	background-color:rgb(105,210,231);
+	color:black;
+	/*gri */
+	background-color:rgb(224,228,204);
+	
+	
+}
+
+.threadComentContainer{
+	width:90%;
+	height:auto;
+	border: 2px solid black;
+	margin-top:30px;
+	margin-left:auto;
+	margin-right:auto;
+	
+	/*trebuie sa pun display:flex in parinte ca sa pot folosi in copii*/
+	display: flex;
+		/*albastru mai deschis */
+	background-color:rgb(167,219,219);
+}
+.threadNumeAutorContainer{
+	
+	width:200px;
+	
+	
+}
+.threadNumeAutor{
+	padding:20px;
+	margin-top:20px;
+	margin-left:auto;
+	margin-right:auto;
+	
+}
+.threadMesajContainer{
+	overflow:hidden;
+	min-height:300px;
+	width:800px;
+	
+	border-left: 2px solid black;
+	
+}
+.threadMesaj{
+	padding:5%;
+	margin-left:auto;
+	margin-right:auto;
+	
+}
+.gluma_zilei{
+	position:absolute;
+	/*albastru mai deschis */
+	background-color:rgb(167,219,219);
+	top:0px;
+	right:10px;
+	padding:10px;
+}
+#meniu{
+	list-style-type: none;
+}
+#meniu li{
+	padding:10px;
+	display:inline-block;
+	margin-right:10px;
+}
+.tabelPrincipal{
+	/*albastru mai deschis */
+	background-color:rgb(167,219,219);
+	}
+.tabelPrincipal td{
+	width:50%;
+	
+}
+.nrPagina{
+	background-color:black;
+	color:white;
+	padding:5px;
+}

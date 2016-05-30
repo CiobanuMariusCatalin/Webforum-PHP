@@ -1,0 +1,56 @@
+
+DROP TABLE replyuri;
+DROP TABLE thread;
+DROP TABLE categorie;
+
+DROP TABLE subforum;
+
+
+
+DROP TABLE utilizatori;
+
+DROP TABLE useri_online;
+
+
+CREATE TABLE subforum(
+	id INTEGER(10) PRIMARY KEY AUTO_INCREMENT,
+	nume VARCHAR(500) NOT NULL,
+descriere VARCHAR(500) );
+CREATE TABLE categorie(
+	id INTEGER(10) PRIMARY KEY AUTO_INCREMENT,
+	sub_forum INTEGER(10) ,
+	nume VARCHAR(500) NOT NULL,
+	descriere VARCHAR(500),
+	FOREIGN KEY(sub_forum) REFERENCES subforum(id) ON DELETE CASCADE
+);
+CREATE TABLE thread(
+	id INTEGER(10) PRIMARY KEY AUTO_INCREMENT,
+	categorie_id INTEGER(10), 
+	nume VARCHAR(500) NOT NULL,
+	descriere VARCHAR(500),
+	autor VARCHAR(50) NOT NULL,
+	mesaj VARCHAR(5000) NOT NULL,
+	data_creeri DATETIME NOT NULL,
+	FOREIGN KEY(categorie_id ) REFERENCES categorie(id) ON DELETE CASCADE
+);
+CREATE TABLE replyuri(
+	id INTEGER(10) PRIMARY KEY AUTO_INCREMENT,
+	thread_id INTEGER(10) ,
+	autor VARCHAR(50) NOT NULL,
+	mesaj VARCHAR(500) NOT NULL,
+	data_creeri DATETIME NOT NULL,
+	FOREIGN KEY(thread_id) REFERENCES thread(id) ON DELETE CASCADE
+);
+
+CREATE TABLE utilizatori(
+	nume VARCHAR(50) PRIMARY KEY,
+	parola VARCHAR(50) NOT NULL,
+	tip_utilizator VARCHAR(50) NOT NULL
+);
+CREATE TABLE useri_online(
+id INTEGER(10) PRIMARY KEY AUTO_INCREMENT,
+ip VARCHAR(20), 
+data_inserarii DATETIME NOT NULL
+);
+
+INSERT INTO utilizatori VALUES('admin','admin','admin');
